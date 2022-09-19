@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="simple" />
+    <package name="eshop" extends="struts-default">
+    
+<!-- 页面跳转 start
+	<action name="top_skip">
+		<result>/WEB-INF/user/userCenterTop.jsp</result>
+	</action>
+	<action name="main_skip">
+		<result>/WEB-INF/user/userCenterMain.jsp</result>
+	</action>
+	<action name="bottom_skip">
+		<result>/WEB-INF/user/userCenterBottom.jsp</result>
+	</action>
+ 页面跳转 end  
+    -->
+<!-- 获取省份 -->
+	<action name="Province" class="provinceAction" method="getProvinceByData">
+	</action>
+<!-- 获取城市 -->
+	<action name="City" class="cityAction" method="getCityByData">
+	</action>
+<!-- 获取地区 -->
+	<action name="Area" class="areaAction" method="getAreaByData">
+	</action>
+    </package>
+</struts>
